@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.3, pytest-4.6.2, py-1.8.0, pluggy-0.12.0 -- /home/eduardo/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /home/eduardo/codenation/data-science-0
+plugins: openfiles-0.3.2, arraydiff-0.3, remotedata-0.3.1, doctestplus-0.3.0
+collecting ... collected 10 items
+
+test_submit.py::test_q1 PASSED                                           [ 10%]
+test_submit.py::test_q2 PASSED                                           [ 20%]
+test_submit.py::test_q3 PASSED                                           [ 30%]
+test_submit.py::test_q4 PASSED                                           [ 40%]
+test_submit.py::test_q5 PASSED                                           [ 50%]
+test_submit.py::test_q6 PASSED                                           [ 60%]
+test_submit.py::test_q7 PASSED                                           [ 70%]
+test_submit.py::test_q8 PASSED                                           [ 80%]
+test_submit.py::test_q9 PASSED                                           [ 90%]
+test_submit.py::test_q10 PASSED                                          [100%]
+
+---- generated xml file: /home/eduardo/codenation/data-science-0/output.xml ----
+========================== 10 passed in 1.50 seconds ===========================
