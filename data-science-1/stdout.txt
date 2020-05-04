@@ -19,4 +19,4 @@ test_submit.py::test_q5 PASSED                                           [100%]
 
 -- Docs: https://docs.pytest.org/en/latest/warnings.html
 ---- generated xml file: /home/eduardo/codenation/data-science-1/output.xml ----
-===================== 5 passed, 2 warnings in 2.93 seconds =====================
+===================== 5 passed, 2 warnings in 1.58 seconds =====================

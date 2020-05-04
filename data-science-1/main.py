@@ -18,7 +18,6 @@
 
 
 import pandas as pd
-#import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as sct
 import seaborn as sns
@@ -28,8 +27,6 @@ from scipy.stats import norm
 
 # In[2]:
 
-
-#%matplotlib inline
 
 from IPython.core.pylabtools import figsize
 
@@ -70,14 +67,6 @@ dataframe.head()
 # In[5]:
 
 
-normal = np.percentile(dataframe.normal, [25, 50, 75])
-binomial = np.percentile(dataframe.binomial, [25, 50, 75])
-(round(normal[0]-binomial[0], 3),round(normal[1]-binomial[1], 3),round(normal[2]-binomial[2], 3))
-
-
-# In[6]:
-
-
 def q1():
     normal = np.percentile(dataframe.normal, [25, 50, 75])
     binomial = np.percentile(dataframe.binomial, [25, 50, 75])
@@ -94,18 +83,7 @@ def q1():
 # 
 # Considere o intervalo $[\bar{x} - s, \bar{x} + s]$, onde $\bar{x}$ é a média amostral e $s$ é o desvio padrão. Qual a probabilidade nesse intervalo, calculada pela função de distribuição acumulada empírica (CDF empírica) da variável `normal`? Responda como uma único escalar arredondado para três casas decimais.
 
-# In[7]:
-
-
-ecdf = ECDF(dataframe.normal)
-media = dataframe.normal.mean()
-desvio = dataframe.normal.std() 
-resultado = (round(ecdf(media + desvio) - ecdf(media - desvio), 3))
-resultado = resultado.item()
-resultado
-
-
-# In[8]:
+# In[6]:
 
 
 def q2():
@@ -129,17 +107,7 @@ def q2():
 # 
 # Em outras palavras, sejam `m_binom` e `v_binom` a média e a variância da variável `binomial`, e `m_norm` e `v_norm` a média e a variância da variável `normal`. Quais as diferenças `(m_binom - m_norm, v_binom - v_norm)`?
 
-# In[9]:
-
-
-m_norm  = dataframe.normal.mean()
-v_norm  = dataframe.normal.var()
-m_binom = dataframe.binomial.mean()
-v_binom = dataframe.binomial.var()
-(round(m_binom - m_norm, 3), round(v_binom - v_norm, 3))
-
-
-# In[10]:
+# In[7]:
 
 
 def q3():
@@ -159,7 +127,7 @@ def q3():
 
 # ### _Setup_ da parte 2
 
-# In[11]:
+# In[8]:
 
 
 stars = pd.read_csv("data/pulsar_stars.csv")
@@ -176,7 +144,7 @@ stars.loc[:, "target"] = stars.target.astype(bool)
 
 # ## Inicie sua análise da parte 2 a partir daqui
 
-# In[12]:
+# In[9]:
 
 
 # Sua análise da parte 2 começa aqui.
@@ -196,7 +164,7 @@ stars.head()
 # 
 # Quais as probabilidade associadas a esses quantis utilizando a CDF empírica da variável `false_pulsar_mean_profile_standardized`? Responda como uma tupla de três elementos arredondados para três casas decimais.
 
-# In[13]:
+# In[10]:
 
 
 aux = stars[stars['target'] == False]
@@ -204,7 +172,7 @@ aux = aux['mean_profile']
 padronizado = (aux - aux.mean()) / aux.std()
 
 
-# In[15]:
+# In[11]:
 
 
 def q4():
@@ -228,7 +196,7 @@ def q4():
 # 
 # Qual a diferença entre os quantis Q1, Q2 e Q3 de `false_pulsar_mean_profile_standardized` e os mesmos quantis teóricos de uma distribuição normal de média 0 e variância 1? Responda como uma tupla de três elementos arredondados para três casas decimais.
 
-# In[16]:
+# In[12]:
 
 
 def q5():
