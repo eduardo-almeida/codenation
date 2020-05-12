@@ -1,0 +1,136 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.3, pytest-4.6.2, py-1.8.0, pluggy-0.12.0 -- /home/eduardo/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /home/eduardo/codenation/data-science-3
+plugins: openfiles-0.3.2, arraydiff-0.3, remotedata-0.3.1, doctestplus-0.3.0
+collecting ... collected 4 items
+
+test_submit.py::test_q1 PASSED                                           [ 25%]
+test_submit.py::test_q2 PASSED                                           [ 50%]
+test_submit.py::test_q3 PASSED                                           [ 75%]
+test_submit.py::test_q4 PASSED                                           [100%]
+
+=============================== warnings summary ===============================
+/home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9
+/home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9
+  /home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+    from collections import Mapping, Iterable
+
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+/home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100
+  /home/eduardo/anaconda3/lib/python3.7/site-packages/statsmodels/base/wrapper.py:100: DeprecationWarning: `formatargspec` is deprecated since Python 3.5. Use `signature` and the `Signature` object directly
+    defaults=argspec[3])
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+---- generated xml file: /home/eduardo/codenation/data-science-3/output.xml ----
+==================== 4 passed, 114 warnings in 3.71 seconds ====================
