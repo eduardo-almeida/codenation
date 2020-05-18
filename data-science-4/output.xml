@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="3" name="pytest" skipped="0" tests="7" time="4.771"><testcase classname="test_submit" file="test_submit.py" line="3" name="test_q1" time="0.001"></testcase><testcase classname="test_submit" file="test_submit.py" line="11" name="test_q2" time="0.003"></testcase><testcase classname="test_submit" file="test_submit.py" line="16" name="test_q3" time="0.001"></testcase><testcase classname="test_submit" file="test_submit.py" line="21" name="test_q4" time="0.001"><failure message="assert 0.202 == -1.047
+  -0.202
+  +-1.047">E   assert 0.202 == -1.047
+      -0.202
+      +-1.047</failure></testcase><testcase classname="test_submit" file="test_submit.py" line="26" name="test_q5" time="0.003"></testcase><testcase classname="test_submit" file="test_submit.py" line="34" name="test_q6" time="0.242"><failure message="assert 19211 == 213
+  -19211
+  +213">E   assert 19211 == 213
+      -19211
+      +213</failure></testcase><testcase classname="test_submit" file="test_submit.py" line="39" name="test_q7" time="0.466"><failure message="assert 0.5 == 8.888
+  -0.5
+  +8.888">E   assert 0.5 == 8.888
+      -0.5
+      +8.888</failure></testcase></testsuite>

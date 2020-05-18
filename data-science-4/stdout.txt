@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.3, pytest-4.6.2, py-1.8.0, pluggy-0.12.0 -- /home/eduardo/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /home/eduardo/codenation/data-science-4
+plugins: openfiles-0.3.2, arraydiff-0.3, remotedata-0.3.1, doctestplus-0.3.0
+collecting ... collected 7 items
+
+test_main.py::test_q1 PASSED                                             [ 14%]
+test_main.py::test_q2 PASSED                                             [ 28%]
+test_main.py::test_q3 PASSED                                             [ 42%]
+test_main.py::test_q4 PASSED                                             [ 57%]
+test_main.py::test_q5 PASSED                                             [ 71%]
+test_main.py::test_q6 PASSED                                             [ 85%]
+test_main.py::test_q7 PASSED                                             [100%]
+
+=============================== warnings summary ===============================
+main.py:102
+  /home/eduardo/codenation/data-science-4/main.py:102: DeprecationWarning: invalid escape sequence \,
+    countries[coluna] = countries[coluna].replace(regex='\,', value='.')
+
+/home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9
+/home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9
+  /home/eduardo/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/widget_selection.py:9: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+    from collections import Mapping, Iterable
+
+test_main.py::test_q6
+test_main.py::test_q6
+test_main.py::test_q7
+test_main.py::test_q7
+  /home/eduardo/anaconda3/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:71: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+    return matrix(data, dtype=dtype, copy=False)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+===================== 7 passed, 7 warnings in 5.29 seconds =====================
