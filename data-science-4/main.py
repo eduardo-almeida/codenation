@@ -95,24 +95,35 @@ countries.head().T
 
 
 variavel_float = ["Pop_density", "Coastline_ratio", "Net_migration", "Infant_mortality", "Literacy", 
-                  "Phones_per_1000", "Arable", "Crops", "Other", "Birthrate", "Deathrate", "Agriculture",
-                  "Industry", "Service"]
+                  "Phones_per_1000", "Arable", "Crops", "Other", "Climate", "Birthrate", "Deathrate", 
+                  "Agriculture", "Industry", "Service"]
 
 for coluna in variavel_float:
     countries[coluna] = countries[coluna].replace(regex='\,', value='.')
     countries[coluna] = countries[coluna].astype(float)
 
 
+# In[9]:
+
+
+numeric_features = countries.select_dtypes(include=[np.number])
+
+
+# In[10]:
+
+
+countries.info()
+
+
 # ## Questão 1
 # 
 # Quais são as regiões (variável `Region`) presentes no _data set_? Retorne uma lista com as regiões únicas do _data set_ com os espaços à frente e atrás da string removidos (mas mantenha pontuação: ponto, hífen etc) e ordenadas em ordem alfabética.
 
-# In[9]:
+# In[11]:
 
 
 def q1():
-    regioes = np.sort(countries['Region'].unique())
-    return list(regioes)
+    return list(np.sort(countries['Region'].unique()))
 
 q1()
 
@@ -121,7 +132,7 @@ q1()
 # 
 # Discretizando a variável `Pop_density` em 10 intervalos com `KBinsDiscretizer`, seguindo o encode `ordinal` e estratégia `quantile`, quantos países se encontram acima do 90º percentil? Responda como um único escalar inteiro.
 
-# In[10]:
+# In[12]:
 
 
 def q2():
@@ -138,7 +149,7 @@ q2()
 # 
 # Se codificarmos as variáveis `Region` e `Climate` usando _one-hot encoding_, quantos novos atributos seriam criados? Responda como um único escalar.
 
-# In[11]:
+# In[13]:
 
 
 def q3():
@@ -151,109 +162,6 @@ def q3():
 q3()
 
 
-# In[12]:
-
-
-copia_country = countries.copy()
-
-
-# In[13]:
-
-
-numeric_features = copia_country.select_dtypes(include=[np.number])
-
-numeric_features.columns
-
-
-# In[14]:
-
-
-for variavel in numeric_features:
-    copia_country.fillna(copia_country[variavel].mean(), inplace=True)
-
-
-# In[15]:
-
-
-copia_country.info()
-
-
-# In[ ]:
-
-
-
-
-
-# In[16]:
-
-
-num_pipeline = Pipeline(steps=[
-    ("imputer", SimpleImputer(strategy="median")),
-    ("minmax_scaler", MinMaxScaler()),
-    ("poly_features", PolynomialFeatures(degree=2, include_bias=False))
-])
-
-
-# In[17]:
-
-
-pipeline_transformation = num_pipeline.fit_transform(copia_country[["Arable"]])
-
-pipeline_transformation[:10]
-
-
-# In[18]:
-
-
-countries.shape
-
-
-# In[19]:
-
-
-
-num_pipeline = Pipeline(steps=[
-    ("imputer", SimpleImputer(strategy="median")),
-    ('scale', StandardScaler())
-])
-
-
-# In[20]:
-
-
-numeric_features = copia_country.select_dtypes(include=[np.number])
-
-numeric_features.columns
-
-
-# In[21]:
-
-
-countries.info()
-
-
-# In[22]:
-
-
-pipeline_transformation = num_pipeline.fit_transform(countries[numeric_features.columns])
-
-pipeline_transformation[:1]
-
-
-# In[23]:
-
-
-pipeline_transformation = num_pipeline.fit_transform(copia_country[numeric_features.columns])
-
-pipeline_transformation[:1]
-
-
-# In[24]:
-
-
-type(numeric_features)
-
-
 # ## Questão 4
 # 
 # Aplique o seguinte _pipeline_:
@@ -263,7 +171,7 @@ type(numeric_features)
 # 
 # Após aplicado o _pipeline_ descrito acima aos dados (somente nas variáveis dos tipos especificados), aplique o mesmo _pipeline_ (ou `ColumnTransformer`) ao dado abaixo. Qual o valor da variável `Arable` após o _pipeline_? Responda como um único float arredondado para três casas decimais.
 
-# In[25]:
+# In[14]:
 
 
 test_country = [
@@ -277,46 +185,23 @@ test_country = [
 ]
 
 
-# In[26]:
-
-
-teste = pd.DataFrame(test_country).T
-
-
-# In[27]:
-
-
-teste = teste.drop(teste.columns[[0, 1]], axis=1)
-
-
-# In[28]:
-
-
-teste.head()
-
-
-# In[29]:
-
-
-pipeline_transformation = num_pipeline.fit_transform(teste)
-
-
-# In[30]:
-
-
-pipeline_transformation
-
-
-# In[31]:
+# In[15]:
 
 
 def q4():
-    return round(test_country[11], 3)
+    num_pipeline = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="median")), 
+        ('scale', StandardScaler())])
+    
+    num_pipeline.fit(numeric_features)
+    pipeline_transformation = num_pipeline.transform([test_country[2:]])
+    resposta = pipeline_transformation[:, numeric_features.columns.get_loc("Arable")]
+    
+    return round(resposta.item(), 3)
+    
 
 q4()
 
-
-# -1.047
 
 # ## Questão 5
 # 
@@ -328,7 +213,7 @@ q4()
 # 
 # Você deveria remover da análise as observações consideradas _outliers_ segundo esse método? Responda como uma tupla de três elementos `(outliers_abaixo, outliers_acima, removeria?)` ((int, int, bool)).
 
-# In[32]:
+# In[16]:
 
 
 def q5():
@@ -347,41 +232,11 @@ def q5():
 q5()
 
 
-# In[33]:
+# In[17]:
 
 
 categories = ['sci.electronics', 'comp.graphics', 'rec.motorcycles']
 newsgroup = fetch_20newsgroups(subset="train", categories=categories, shuffle=True, random_state=42)
-
-
-# In[40]:
-
-
-len(newsgroup.data)
-
-
-# In[49]:
-
-
-count_vectorizer = CountVectorizer()
-newsgroups_counts = count_vectorizer.fit_transform(newsgroup.data)
-#int(count_vectorizer.vocabulary_.get('phone'))
-
-
-# In[53]:
-
-
-words_idx = sorted([count_vectorizer.vocabulary_.get(f"{word.lower()}") for word in
-                    [u"phone"]])
-
-telefone = pd.DataFrame(newsgroups_counts[:, words_idx].toarray(), 
-             columns=np.array(count_vectorizer.get_feature_names())[words_idx])
-
-
-# In[55]:
-
-
-telefone.sum()
 
 
 # ## Questão 6
@@ -397,7 +252,7 @@ telefone.sum()
 # 
 # Aplique `CountVectorizer` ao _data set_ `newsgroups` e descubra o número de vezes que a palavra _phone_ aparece no corpus. Responda como um único escalar.
 
-# In[57]:
+# In[18]:
 
 
 def q6():
@@ -413,46 +268,24 @@ def q6():
 q6()
 
 
-# 213
-
 # ## Questão 7
 # 
 # Aplique `TfidfVectorizer` ao _data set_ `newsgroups` e descubra o TF-IDF da palavra _phone_. Responda como um único escalar arredondado para três casas decimais.
 
-# In[35]:
-
-
-tfidf_vectorizer = TfidfVectorizer()
-tfidf_vectorizer.fit(newsgroup.data)
-newsgroups_tfidf_vectorized = tfidf_vectorizer.transform(newsgroup.data)
-
-
-# In[36]:
-
-
-count_vectorizer = CountVectorizer()
-newsgroups_counts = count_vectorizer.fit_transform(newsgroup.data)
-
-
-# In[37]:
-
-
-pd.DataFrame(newsgroups_tfidf_vectorized.toarray())
-
-
-# In[38]:
+# In[19]:
 
 
 def q7():
     tfidf_vectorizer = TfidfVectorizer()
     tfidf_vectorizer.fit(newsgroup.data)
+    words_idx = sorted([tfidf_vectorizer.vocabulary_.get(f"{word.lower()}") for word in [u"phone"]])
+
     newsgroups_tfidf_vectorized = tfidf_vectorizer.transform(newsgroup.data)
-    #return round(newsgroups_tfidf_vectorized.shape[0],3)
-    return 0.5
+    resposta = pd.DataFrame(newsgroups_tfidf_vectorized[:, words_idx].toarray(), 
+             columns=np.array(tfidf_vectorizer.get_feature_names())[words_idx])
+    return float(round(resposta.sum(), 3))
 q7()
 
-
-# 8.888
 
 # In[ ]:
 
