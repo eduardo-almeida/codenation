@@ -13,7 +13,7 @@ Atuar como Cientista de Dados exercendo tarefas de coleta de dados estruturados 
 **Background in:** Python | SQL | Machine Learning  
 
 **Links:**
-* [LinkedIn](https://www.linkedin.com/in/eduardo-almeida-814a676a/)
+* [LinkedIn](https://www.linkedin.com/in/eduardo-almeida-814a676a/)  
 
 
 ## Projetos:
