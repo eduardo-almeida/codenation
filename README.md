@@ -6,7 +6,7 @@
 </p>
 
 # Eduardo Almeida    
-<sub>*Data Science Student*</sub> 
+<sub>*Data Science*</sub> 
 
 Atuar como Cientista de Dados exercendo tarefas de coleta de dados estruturados e não-estruturados, preparação e mineração dos dados,análise estatística, análise descritiva, modelagem preditiva e Machine Learning. Possuo conhecimento na linguagem Python e nas suas principais bibliotecas para manipulação, processamento e limpeza de dados para análises complexas como Pandas, Scikit-learn e Numpy , além de conhecimentos em SQL e visualização de dados. 
 
